@@ -25,6 +25,11 @@ h1, h2, h3 {
   color: #1f2a44;
 }
 
+.text
+{
+  text-align: justify;
+}
+
 /* LOGIN */
 .login-img {
   width: 100%;
