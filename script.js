@@ -1,11 +1,28 @@
+// script.js
 document.addEventListener("DOMContentLoaded", () => {
-  // Selecciona el div con id "card-bo"
-  const cardBO = document.getElementById("card-bo");
-
-  // Agrega un evento de clic
-  cardBO.addEventListener("click", () => {
-    // Redirige al archivo HTML deseado
-    window.location.href = "bo.html";
-  });
+  // Función para redirigir según la sección
+  window.goTo = function(section) {
+    switch(section) {
+      case "CS":
+        window.location.href = "customer-support.html";
+        break;
+      case "ISM":
+        window.location.href = "ism.html";
+        break;
+      case "TL":
+        window.location.href = "tl.html";
+        break;
+      case "WIKI":
+        window.location.href = "wiki.html";
+        break;
+      case "POSTULACION":
+        window.location.href = "postulacion.html";
+        break;
+      case "SLACK":
+        window.location.href = "slack.html";
+        break;
+      default:
+        alert("Sección no encontrada: " + section);
+    }
+  };
 });
-
