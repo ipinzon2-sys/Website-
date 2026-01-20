@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Función para redirigir según la sección
   window.goTo = function(section) {
     switch(section) {
+      case "BO":
+        window.location.href = "bo.html";
+        break;
       case "CS":
         window.location.href = "customer-support.html";
         break;
@@ -26,3 +29,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 });
+
