@@ -1,42 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <base target="_top">
+  <meta charset="UTF-8">
+  <title>BO – Backoffice Tutor</title>
   <link rel="stylesheet" href="bostyle.css">
 </head>
+<body>
 
-<body class="bo">
+  <div class="container">
 
-  <h1>Uso del BO</h1>
-
-  <section class="dashboard">
-
+    <!-- LOGIN -->
     <div class="card login">
-      <img src="images/login.png" alt="Login">
-      <p>1. Revisa con tu TL que tengas tus credenciales</p>
+      <h3>Revisa con tu TL que tengas tus credenciales:</h3>
+      <h1>BO 1</h1>
+
+      <label>Usuario</label>
+      <input type="text" placeholder="usuario123">
+
+      <label>Contraseña</label>
+      <input type="password" placeholder="••••••••">
+
+      <button>Ingresar</button>
     </div>
 
+    <!-- PERFIL -->
     <div class="card perfil">
-      <img src="images/profile.png" alt="Perfil">
-      <p>2. Perfil del tutor</p>
+      <h2>Perfil del Tutor</h2>
+
+      <div class="perfil-content">
+        <img src="https://via.placeholder.com/120" class="avatar">
+
+        <div class="perfil-info">
+          <h3>Carlos Gómez</h3>
+          <p>🎓 Tutor</p>
+          <p>✉️ carlos.gomez@correo.com</p>
+          <p>🆔 ID: 456789</p>
+          <p>📅 Miembro desde: 2019</p>
+        </div>
+      </div>
     </div>
 
+    <!-- CURSOS -->
     <div class="card cursos">
-      <img src="images/courses.png" alt="Cursos">
-      <p>3. Cursos del tutor</p>
+      <h2>Mis Cursos</h2>
+
+      <div class="grid-cursos">
+        <div class="curso red">
+          <h4>Matemáticas 101</h4>
+          <span>8 Módulos</span>
+        </div>
+
+        <div class="curso dark">
+          <h4>Historia Mundial</h4>
+          <span>10 Módulos</span>
+        </div>
+
+        <div class="curso blue">
+          <h4>Ciencia y Tecnología</h4>
+          <span>7 Módulos</span>
+        </div>
+
+        <div class="curso red">
+          <h4>Literatura Española</h4>
+          <span>6 Módulos</span>
+        </div>
+      </div>
     </div>
 
+    <!-- GRUPOS -->
     <div class="card grupos">
-      <img src="<?= getImageUrl('grupos.png') ?>">
-      <p>4. Grupos</p>
+      <h2>Mis Grupos</h2>
+
+      <div class="grupo">
+        <h4>Grupo A - Mat. 101</h4>
+        <span>25 Estudiantes</span>
+      </div>
+
+      <div class="grupo">
+        <h4>Grupo B - Historia</h4>
+        <span>30 Estudiantes</span>
+      </div>
     </div>
 
+    <!-- ESTUDIANTES -->
     <div class="card estudiantes">
-      <img src="<?= getImageUrl('estudiantes.png') ?>">
-      <p>5. Estudiantes</p>
+      <h2>Mis Estudiantes</h2>
+
+      <div class="estudiante">
+        <span>Ana López</span>
+        <span class="tag orange">Destacada</span>
+      </div>
+
+      <div class="estudiante">
+        <span>Mario Ríos</span>
+        <span class="tag green">En Progreso</span>
+      </div>
+
+      <div class="estudiante">
+        <span>Sofía Hernández</span>
+        <span class="tag red">Necesita Apoyo</span>
+      </div>
+
+      <div class="estudiante">
+        <span>Juan Pérez</span>
+        <span class="tag green">Excelente</span>
+      </div>
     </div>
 
-  </section>
+  </div>
 
 </body>
 </html>
+
