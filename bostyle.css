@@ -1,48 +1,103 @@
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2c7be5, #1b4f9c);
+}
 
-    .bo{
-      /*margin: 0;*/
-      /*padding: 30px;*/
-      /*font-family: Arial, sans-serif;*/
-      background: linear-gradient(135deg, #2c7be5, #1b4f9c);
-         }
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    h1 {
-      margin-bottom: 32px;
-      color: #1f3c88;
-    }
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 
-    .dashboard {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas:
-        "login perfil"
-        "cursos grupos"
-        "estudiantes estudiantes";
-      gap: 24px;
-    }
+h1, h2, h3 {
+  margin-top: 0;
+  color: #1f2a44;
+}
 
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      text-align: center;
-    }
+/* LOGIN */
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
 
-    .card img {
-      width: 100%;
-      border-radius: 12px;
-    }
+.login button {
+  width: 100%;
+  padding: 12px;
+  background: #ff7a18;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-    .card p {
-      margin-top: 12px;
-      font-weight: 600;
-      color: #1f3c88;
-    }
+/* PERFIL */
+.perfil-content {
+  display: flex;
+  gap: 20px;
+}
 
-    .login { grid-area: login; }
-    .perfil { grid-area: perfil; }
-    .cursos { grid-area: cursos; }
-    .grupos { grid-area: grupos; }
-    .estudiantes { grid-area: estudiantes; }
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+}
+
+/* CURSOS */
+.grid-cursos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.curso {
+  padding: 15px;
+  border-radius: 12px;
+  color: white;
+}
+
+.curso.red { background: #e74c3c; }
+.curso.blue { background: #3498db; }
+.curso.dark { background: #2c3e50; }
+
+/* GRUPOS */
+.grupo {
+  background: #f1f4f9;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* ESTUDIANTES */
+.estudiante {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+}
+
+.tag.orange { background: #f39c12; }
+.tag.green { background: #2ecc71; }
+.tag.red { background: #e74c3c; }
+
 
