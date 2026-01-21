@@ -1,3 +1,9 @@
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+}
+
+/* BODY */
 body {
   margin: 0;
   padding: 30px;
@@ -5,14 +11,16 @@ body {
   background: linear-gradient(135deg, #cce500, #aacc00);
 }
 
+/* GRID PRINCIPAL */
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 cards arriba */
   gap: 25px;
   max-width: 1200px;
   margin: auto;
 }
 
+/* CARD BASE */
 .card {
   background: white;
   border-radius: 16px;
@@ -20,50 +28,44 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+/* TITULOS */
 h1, h2, h3 {
   margin-top: 0;
   color: #1f2a44;
 }
 
-.text
-{
+/* TEXTO */
+.text {
   text-align: justify;
 }
 
+/* ---------- IMÁGENES ---------- */
 
+/* LOGIN (vertical) */
 .login-img {
   width: 100%;
   max-width: 480px;
-  max-height: 560px;   
+  max-height: 560px;
   object-fit: contain;
-
   display: block;
   margin: auto;
   border-radius: 24px;
 }
 
-
-
-/* PERFIL */
-.perfil-content {
-  display: flex;
-  gap: 20px;
+/* GROUPS (horizontal full width) */
+.groups {
+  grid-column: 1 / 4; /* ocupa todo el ancho */
 }
 
-/* GRUPOS */
-.card-full {
-  grid-column: 1 / -1;
-  padding: 16px;
-}
 .groups-img {
   width: 100%;
-  height: auto;           
+  height: auto;
   display: block;
-
   border-radius: 12px;
 }
 
-/* ESTUDIANTES */
+/* ---------- ESTUDIANTES ---------- */
+
 .estudiante {
   display: flex;
   justify-content: space-between;
@@ -78,7 +80,28 @@ h1, h2, h3 {
 }
 
 .tag.orange { background: #f39c12; }
-.tag.green { background: #2ecc71; }
-.tag.red { background: #e74c3c; }
+.tag.green  { background: #2ecc71; }
+.tag.red    { background: #e74c3c; }
 
+/* ---------- CARD VACÍA ---------- */
 
+.empty {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .groups {
+    grid-column: 1;
+  }
+
+  .empty {
+    display: none;
+  }
+}
