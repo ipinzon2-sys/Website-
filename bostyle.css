@@ -51,6 +51,10 @@ h1, h2, h3 {
 }
 
 /* GRUPOS */
+.card-full {
+  grid-column: 1 / -1;
+  padding: 16px;
+}
 .groups-img {
   width: 100%;
   height: auto;           
